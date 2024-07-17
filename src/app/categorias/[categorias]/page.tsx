@@ -86,7 +86,11 @@ const CategoriasPage = ({ params }: PageParams) => {
                 {produto.fotos && produto.fotos.length > 0 && (
                   <Link href={`/produtos/${produto.id}`}>
                     <Image
-                      src={produto.fotos[1].src}
+                      src={
+                        produto.fotos[1]
+                          ? produto.fotos[1].src
+                          : produto.fotos[0].src
+                      }
                       alt={`Imagem de ${produto.nome}`}
                       width={300}
                       height={200}
@@ -146,7 +150,11 @@ const CategoriasPage = ({ params }: PageParams) => {
               {produto.fotos && produto.fotos.length > 0 && (
                 <Link href={`/produtos/${produto.id}`}>
                   <Image
-                    src={produto.fotos[1].src}
+                    src={
+                      produto.fotos[1]
+                        ? produto.fotos[1].src
+                        : produto.fotos[0].src
+                    }
                     alt={`Imagem de ${produto.nome}`}
                     width={300}
                     height={200}

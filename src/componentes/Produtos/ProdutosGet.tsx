@@ -44,12 +44,16 @@ export default function GetProdutosDestaque() {
           {produtos.map((produto: any) => (
             <div
               key={produto.id}
-              className="flex flex-col  rounded-md text-start gap-2 p-2 max-w-xs items-center bg-white shadow-lg"
+              className="flex flex-col rounded-md text-start gap-2 p-2 max-w-xs items-center bg-white shadow-lg"
             >
               {produto.fotos && produto.fotos.length > 0 && (
                 <Link href={`/produtos/${produto.id}`}>
                   <Image
-                    src={produto.fotos[1].src}
+                    src={
+                      produto.fotos[1]
+                        ? produto.fotos[1].src
+                        : produto.fotos[0].src
+                    }
                     alt={`Imagem de ${produto.nome}`}
                     width={300}
                     height={200}
