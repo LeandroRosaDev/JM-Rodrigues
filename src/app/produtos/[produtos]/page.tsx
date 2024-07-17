@@ -101,13 +101,13 @@ export default function ProdutoPage({ params }: PageParams) {
             <h1 className="text-2xl font-semibold">{data.nome}</h1>
             <div className="flex flex-col gap-2">
               <span className="line-through text-red-500">
-                De: R$ {data.preco_original},00
+                De: R$ {data.preco_original}
               </span>
               <span className="text-xl text-green-600">
-                Por: R$ {data.preco},00
+                Por: R$ {data.preco}
               </span>
               <span className="text-gray-600">
-                Ou 12x de: R$ {data.preco_parcelado},00
+                Ou no cartão por: R$ {data.preco_parcelado}
               </span>
             </div>
             <div className="flex items-center gap-4">
@@ -121,7 +121,7 @@ export default function ProdutoPage({ params }: PageParams) {
             >
               Compre via WhatsApp
             </a>
-            <p>Pagamento realizado no ato da Entrega</p>
+            <p>Parcelamos no cartão em até 6x</p>
           </div>
         </div>
         <div className="my-4 mx-8">
@@ -134,12 +134,12 @@ export default function ProdutoPage({ params }: PageParams) {
               {data.nome_long} {data.cor}
             </h3>
             <p>{data.descricao}</p>
-            {data.altura && data.largura && data.profundidade_aberto && (
+            {data.altura && data.largura && (
               <>
                 <h3 className="mt-8">Medidas:</h3>
                 <p>Altura: {data.altura}m</p>
-                <p>Largura: {data.largura}m</p>
-                <p>Profundidade: {data.profundidade_aberto}m</p>
+                <p>Largura|Diâmetro: {data.largura}</p>
+                {/* <p>Profundidade: {data.profundidade_aberto}m</p> */}
                 {data.profundidade_fechado && (
                   <p>
                     Profundidade fechado (sofás retráteis):{" "}

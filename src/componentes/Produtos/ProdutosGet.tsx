@@ -61,20 +61,20 @@ export default function GetProdutosDestaque() {
                 </Link>
               )}
 
-              <h2 className="w-full text-2xl font-medium">{produto.nome}</h2>
+              <h2 className="w-full text-lg font-medium">{produto.nome}</h2>
               <p className="w-full line-through">
-                De: R$ {produto.preco_original},00
+                De: R$ {produto.preco_original}
               </p>
               <p className="w-full">
                 Por:{" "}
                 <span className="font-bold text-2xl text-red-600">
                   {" "}
-                  R$ {produto.preco},00
+                  R$ {produto.preco}
                 </span>{" "}
                 <span>a vista</span>
               </p>
               <p className="w-full text-sm">
-                Ou no cartão em até 12x de: R${produto.preco_parcelado},00
+                Ou no cartão por: R${produto.preco_parcelado}
               </p>
               <Link
                 target="blank"
