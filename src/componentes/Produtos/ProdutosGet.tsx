@@ -73,7 +73,8 @@ export default function GetProdutosDestaque() {
                 Ou no cartão em até 12x de: R${produto.preco_parcelado},00
               </p>
               <Link
-                href="#"
+                target="blank"
+                href={produto.link_1}
                 className="bg-green-600 flex rounded-3xl w-48 p-1 items-center text-center justify-center text-white"
               >
                 <Image

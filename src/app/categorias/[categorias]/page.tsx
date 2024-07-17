@@ -6,7 +6,6 @@ import Image from "next/image";
 import { PageParams } from "@/interfaces/Produtos-types";
 import FiltroComponent from "@/componentes/FiltroComponente";
 import { token } from "@/componentes/cod";
-import { url } from "@/componentes/url";
 import CategoriasMenu from "@/componentes/Produtos/CategoriasMenu";
 
 const CategoriasPage = ({ params }: PageParams) => {

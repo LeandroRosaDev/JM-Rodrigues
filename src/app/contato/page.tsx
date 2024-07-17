@@ -11,7 +11,7 @@ export default function ContatoPage() {
         </h1>
         <p className="text-base sm:text-lg">Fale Conosco</p>
       </div>
-      <div className="-mt-20 mb-10 max-w-7xl mx-auto">
+      <div className="md:-mt-20 mb-10 max-w-7xl mx-auto">
         <div className="flex flex-wrap items-center justify-center bg-white mx-auto p-6 sm:p-12 rounded-t-md">
           <div className="flex flex-col text-center items-center justify-center gap-2 sm:gap-4 m-2 p-2 max-w-xs">
             <Image

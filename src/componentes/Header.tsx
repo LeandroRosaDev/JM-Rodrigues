@@ -17,16 +17,16 @@ export default function Header() {
     <header className="bg-gray-800">
       <nav className="container mx-auto">
         <ul className="md:flex flex-col sm:flex-row justify-around py-12 text-white font-semibold text-lg hidden">
-          <li>
+          <li className="hover:text-yellow-500">
             <Link href="/">INICIO</Link>
           </li>
-          <li>
+          <li className="hover:text-yellow-500">
             <Link href="/produtos">PRODUTOS</Link>
           </li>
-          <li>
+          <li className="hover:text-yellow-500">
             <Link href="/sobre">QUEM SOMOS</Link>
           </li>
-          <li>
+          <li className="hover:text-yellow-500">
             <Link href="/contato">CONTATO</Link>
           </li>
         </ul>
@@ -63,17 +63,17 @@ export default function Header() {
               </Link>
             </li>
             <li className="hover:text-blue-400">
-              <Link href="#sobre" onClick={closeMenu}>
+              <Link href="/sobre" onClick={closeMenu}>
                 SOBRE NÓS
               </Link>
             </li>
             <li className="hover:text-blue-400">
-              <Link href="#planos" onClick={closeMenu}>
-                PLANOS
+              <Link href="/produtos" onClick={closeMenu}>
+                PRODUTOS
               </Link>
             </li>
             <li className="hover:text-blue-400">
-              <Link href="#contato" onClick={closeMenu}>
+              <Link href="/contato" onClick={closeMenu}>
                 CONTATO
               </Link>
             </li>
