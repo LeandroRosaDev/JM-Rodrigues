@@ -8,7 +8,7 @@ export default function Footer() {
         <nav>
           <ul className="flex flex-col">
             <li>
-              <Link href="/">INICIO</Link>
+              <Link href="/">INÍCIO</Link>
             </li>
             <li>
               <Link href="/produtos">PRODUTOS</Link>
@@ -31,7 +31,10 @@ export default function Footer() {
               alt="Icone de rede social"
             />
           </Link>
-          <Link href="/">
+          <Link
+            target="blank"
+            href="//api.whatsapp.com/send?phone=5521966453123&text=Olá tudo bem? Gostaria de saber mais sobre os produtos disponíveis! Eu vim através do site de vocês!!"
+          >
             <Image
               src="/assets/icones/7.svg"
               width={50}
@@ -51,6 +54,16 @@ export default function Footer() {
       </div>
       <div className="bg-yellow-500 text-center uppercase p-10">
         <h1>Todos os direitos reservados. | © 2024 jm rodrigues</h1>
+        <p className="text-xs mt-1">
+          Este site foi produzido por{" "}
+          <a
+            className="text-xs font-bold"
+            target="blank"
+            href="https://marketing.altuori.com"
+          >
+            Marketing Altuori
+          </a>
+        </p>
       </div>
     </footer>
   );

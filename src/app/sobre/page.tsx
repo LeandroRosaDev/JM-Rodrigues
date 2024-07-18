@@ -30,17 +30,18 @@ export default function SobrePage() {
             className="w-full sm:w-auto"
           />
           <div className="p-4 flex flex-col items-center">
-            <h1 className="text-xl mb-4 sm:mb-10 border-b border-yellow-500 pb-2">
-              Nossa história começa em 1950
+            <h1 className="text-2xl mb-4 sm:mb-10 border-b border-yellow-500 pb-2">
+              Nossa história começa em 20/08/1995
             </h1>
             <p className="max-w-3xl">
-              O início foi longo e complicado, e isso é apenas um texto para
-              ilustrar a história da madeireira. O início foi longo e
-              complicado, e isso é apenas um texto para ilustrar a história da
-              madeireira. O início foi longo e complicado, e isso é apenas um
-              texto para ilustrar a história da madeireira. O início foi longo e
-              complicado, e isso é apenas um texto para ilustrar a história da
-              madeireira.
+              A trajetória da JM Rodrigues iniciou-se em 20 de agosto de 1995,
+              enfrentando inúmeros desafios. Desde o princípio, dedicamo-nos à
+              venda de madeiras para obras, com foco na qualidade e no
+              compromisso. Superando as dificuldades iniciais, conquistamos a
+              confiança de nossos clientes, estabelecendo uma reputação sólida
+              no mercado. Este período inicial, marcado por muito esforço e
+              determinação, foi fundamental para consolidar os valores que
+              praticamos até hoje.
             </p>
           </div>
         </div>
@@ -53,17 +54,20 @@ export default function SobrePage() {
             className="w-full sm:w-auto"
           />
           <div className="p-4 flex flex-col items-center">
-            <h1 className="text-xl mb-4 sm:mb-10 border-b border-yellow-500 pb-2">
+            <h1 className="text-2xl mb-4 sm:mb-10 border-b border-yellow-500 pb-2">
               Muita luta e garra
             </h1>
             <p className="max-w-3xl">
-              O início foi longo e complicado, e isso é apenas um texto para
-              ilustrar a história da madeireira. O início foi longo e
-              complicado, e isso é apenas um texto para ilustrar a história da
-              madeireira. O início foi longo e complicado, e isso é apenas um
-              texto para ilustrar a história da madeireira. O início foi longo e
-              complicado, e isso é apenas um texto para ilustrar a história da
-              madeireira.
+              A história da JM Rodrigues é marcada por uma trajetória de muita
+              luta e garra. Após os desafios iniciais, nossa dedicação e
+              perseverança continuaram a ser postos à prova. Enfrentamos o
+              mercado competitivo e a necessidade constante de inovação, sempre
+              com o objetivo de atender às necessidades dos nossos clientes.
+              Cada obstáculo superado fortaleceu nossa empresa e nossa equipe,
+              consolidando nossa posição no setor de madeiras para obras.
+              Acreditamos que é essa determinação incansável que nos distingue,
+              permitindo-nos oferecer produtos de alta qualidade e um serviço
+              excepcional.
             </p>
           </div>
         </div>
@@ -76,17 +80,21 @@ export default function SobrePage() {
             className="w-full sm:w-auto"
           />
           <div className="p-4 flex flex-col items-center">
-            <h1 className="text-xl mb-4 sm:mb-10 border-b border-yellow-500 pb-2">
+            <h1 className="text-2xl mb-4 sm:mb-10 border-b border-yellow-500 pb-2">
               Hoje em 2024
             </h1>
             <p className="max-w-3xl">
-              O início foi longo e complicado, e isso é apenas um texto para
-              ilustrar a história da madeireira. O início foi longo e
-              complicado, e isso é apenas um texto para ilustrar a história da
-              madeireira. O início foi longo e complicado, e isso é apenas um
-              texto para ilustrar a história da madeireira. O início foi longo e
-              complicado, e isso é apenas um texto para ilustrar a história da
-              madeireira.
+              Em 2024, nos orgulhamos da nossa trajetória e das conquistas
+              alcançadas ao longo dos anos. O que começou como um pequeno
+              empreendimento em 1995, hoje é uma referência no setor de madeiras
+              para obras. Nosso compromisso com a qualidade e a satisfação do
+              cliente continua a ser o pilar de nossas operações. Investimos
+              continuamente em tecnologia e inovação para atender às demandas do
+              mercado e superar as expectativas de nossos clientes. Nossa
+              equipe, altamente capacitada, compartilha da mesma visão e
+              dedicação que nos impulsionaram desde o início. Estamos preparados
+              para enfrentar o futuro com confiança, mantendo nossos valores e a
+              excelência que nos definem.
             </p>
           </div>
         </div>

@@ -4,7 +4,10 @@ import Image from "next/image";
 export default function WppButton() {
   return (
     <div className="flex items-center">
-      <a href="//api.whatsapp.com/send?phone=+5521992390346&text=Olá tudo bem? Gostaria de saber mais sobre os serviços disponíveis! Eu vim através do site de vocês!!">
+      <a
+        target="blank"
+        href="//api.whatsapp.com/send?phone=5521966453123&text=Olá tudo bem? Gostaria de saber mais sobre os produtos disponíveis! Eu vim através do site de vocês!!"
+      >
         <Image
           src="/assets/icones/2.svg"
           width={50}

@@ -18,7 +18,8 @@ export default function Home() {
             Ferragens{" "}
           </h1>
           <Link
-            href="#"
+            target="blank"
+            href="//api.whatsapp.com/send?phone=+5521966453123&text=Olá tudo bem? Gostaria de saber mais sobre os produtos disponíveis! Eu vim através do site de vocês!!"
             className="bg-green-700 flex rounded-3xl w-48 p-1 items-center text-center justify-center text-white"
           >
             <Image
@@ -162,7 +163,7 @@ export default function Home() {
               <p className="text-sm mt-2 ">
                 Aceitamos todas as bandeiras de cartões nas nossas transações,
                 garantindo muito mais segurança, flexibilidade e conforto nos
-                pagamentos. Parcelamos em até 12 vezes qualquer transação
+                pagamentos. Parcelamos em até 6 vezes qualquer transação
               </p>
             </div>
             <div className="flex flex-col max-w-xs items-center justify-center text-center">
@@ -174,9 +175,9 @@ export default function Home() {
               />
               <h1 className="text-xl">mais de 30 anos de tradição</h1>
               <p className="text-sm mt-2 ">
-                Com 30 anos de experiência e duas filiais ativas, a Galuta
-                Madeiras é altamente qualificada e possui toda a infraestrutura
-                necessária para garantir um serviço de excelência.
+                Com 30 anos de experiência , a JM Rodrigues Madeiras é altamente
+                qualificada e possui toda a infraestrutura necessária para
+                garantir um serviço de excelência.
               </p>
             </div>
           </div>

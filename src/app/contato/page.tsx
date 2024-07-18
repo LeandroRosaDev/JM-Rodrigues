@@ -22,7 +22,7 @@ export default function ContatoPage() {
             />
             <h1 className="text-lg sm:text-xl">Onde Nós Estamos</h1>
             <p className="text-sm sm:text-base">
-              Rua Píres do Rio, 509 - Éden, <br /> São João de Meriti - RJ
+              Rua Píres do Rio, LT22 QD05 - Éden, <br /> São João de Meriti - RJ
             </p>
           </div>
           <div className="flex flex-col text-center items-center justify-center gap-2 sm:gap-4 m-2 p-2 max-w-xs">
@@ -34,7 +34,7 @@ export default function ContatoPage() {
             />
             <h1 className="text-lg sm:text-xl">Entre em contato</h1>
             <p className="text-sm sm:text-base">
-              Telefone - (21) 9 9804 8776 <br /> (21) 2665 0938
+              Telefone - (21) 9 96645-3123 <br /> (21) 2087-3867
             </p>
           </div>
           <div className="flex flex-col text-center items-center justify-center gap-2 sm:gap-4 m-2 p-2 max-w-xs">
@@ -60,7 +60,8 @@ export default function ContatoPage() {
             ou reclamações, basta enviar-nos uma mensagem.
           </p>
           <Link
-            href=""
+            target="blank"
+            href="//api.whatsapp.com/send?phone=5521966453123&text=Olá tudo bem? Gostaria de saber mais sobre os produtos disponíveis! Eu vim através do site de vocês!!"
             className="border border-white px-4 sm:px-6 py-2 sm:py-4 rounded-sm hover:bg-white hover:text-black"
           >
             Mensagem

@@ -18,7 +18,7 @@ export default function Header() {
       <nav className="container mx-auto">
         <ul className="md:flex flex-col sm:flex-row justify-around py-12 text-white font-semibold text-lg hidden">
           <li className="hover:text-yellow-500">
-            <Link href="/">INICIO</Link>
+            <Link href="/">INÍCIO</Link>
           </li>
           <li className="hover:text-yellow-500">
             <Link href="/produtos">PRODUTOS</Link>
