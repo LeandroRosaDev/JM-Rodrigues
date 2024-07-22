@@ -86,8 +86,8 @@ export default function Home() {
             </Link>
           </div>
           <div className="bg-[#BF8B63] w-100 text-center text-white font-bold p-4">
-            <Link href="/categorias/Madeiras para Acabamento">
-              <h1 className="mb-4">Madeira para Acabamento</h1>
+            <Link href="/categorias/Marcenaria">
+              <h1 className="mb-4">Marcenaria</h1>
               <Image
                 src={"/assets/img/3.png"}
                 width={270}

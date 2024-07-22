@@ -36,7 +36,7 @@ export default function CategoriasMenu() {
           </li>
           <li>
             <Link
-              href="/categorias/Madeiras para Acabamento"
+              href="/categorias/Marcenaria"
               className="flex flex-col items-center hover:-mt-2 transition-all"
             >
               <Image

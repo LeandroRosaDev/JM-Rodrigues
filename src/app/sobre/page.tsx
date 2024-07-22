@@ -23,7 +23,7 @@ export default function SobrePage() {
       <div className="flex flex-col items-center justify-center gap-10 my-10">
         <div className="flex flex-col sm:flex-row items-center text-center bg-white  rounded-lg shadow-md">
           <Image
-            src="/assets/img/1.png"
+            src="/assets/img/7.png"
             width={500}
             height={500}
             alt="foto da madeireira"
@@ -47,7 +47,7 @@ export default function SobrePage() {
         </div>
         <div className="flex flex-col sm:flex-row items-center text-center bg-white  rounded-lg shadow-md">
           <Image
-            src="/assets/img/2.png"
+            src="/assets/img/8.png"
             width={500}
             height={500}
             alt="foto da madeireira"
@@ -73,7 +73,7 @@ export default function SobrePage() {
         </div>
         <div className="flex flex-col sm:flex-row items-center text-center bg-white  rounded-lg shadow-md">
           <Image
-            src="/assets/img/1.png"
+            src="/assets/img/9.png"
             width={500}
             height={500}
             alt="foto da madeireira"

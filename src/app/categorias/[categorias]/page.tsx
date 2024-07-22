@@ -1,4 +1,3 @@
-// componentes/produtosComponentes/CategoriasPage.tsx
 "use client";
 import { useEffect, useState, useCallback } from "react";
 import Link from "next/link";
@@ -7,15 +6,17 @@ import { PageParams } from "@/interfaces/Produtos-types";
 import FiltroComponent from "@/componentes/FiltroComponente";
 import { token } from "@/componentes/cod";
 import CategoriasMenu from "@/componentes/Produtos/CategoriasMenu";
+import PesquisaProdutos from "@/componentes/PesquisaProdutos";
 
 const CategoriasPage = ({ params }: PageParams) => {
   const [produtos, setProdutos] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [filters, setFilters] = useState<Record<string, string>>({});
+  const [searchTerm, setSearchTerm] = useState<string>("");
 
   const fetchProdutos = useCallback(async () => {
-    let url = `https://apijmrodrigues.altuori.com/wp-json/api/produto?disponibilidade=sim&categoria=${params.categorias}`;
+    let url = `https://apijmrodrigues.altuori.com/wp-json/api/produto?disponibilidade=sim&categoria=${params.categorias}&_limit=120&q=${searchTerm}`;
     Object.keys(filters).forEach((key) => {
       url += `&${key}=${filters[key]}`;
     });
@@ -45,7 +46,7 @@ const CategoriasPage = ({ params }: PageParams) => {
     } finally {
       setLoading(false);
     }
-  }, [params, filters]);
+  }, [params, filters, searchTerm]);
 
   useEffect(() => {
     fetchProdutos();
@@ -65,23 +66,28 @@ const CategoriasPage = ({ params }: PageParams) => {
           </h1>
         </div>
         <CategoriasMenu />
-        <h3 className="text-center mt-4">{error}</h3>
+        <h3 className="text-center text-2xl mt-4">{error}</h3>
 
         <h1 className="text-center m-8">
           Mas você pode continuar vendo todos os produtos de:{" "}
           {decodeURIComponent(params.categorias).replace(/%20/g, " ")}
         </h1>
-        <div className="flex flex-row justify-center">
-          <FiltroComponent
-            params={params}
-            onFilterChange={handleFilterChange}
-          />
+        <div className="flex flex-col items-start justify-center sm:flex-row">
+          <div className=" flex flex-col items-center">
+            <PesquisaProdutos
+              onSearch={(term: string) => setSearchTerm(term)}
+            />
+            <FiltroComponent
+              params={params}
+              onFilterChange={handleFilterChange}
+            />
+          </div>
 
-          <div className="flex flex-wrap gap-5 justify-center max-w-screen-lg m-8">
+          <div className="flex flex-wrap gap-4 justify-center max-w-screen-lg m-4">
             {produtos.map((produto: any) => (
               <div
                 key={produto.id}
-                className="relative max-w-sm bg-white border border-gray-300 rounded-lg overflow-hidden shadow-md transition-transform transform hover:scale-105 flex flex-col items-center text-center p-4 justify-between"
+                className="relative w-full sm:w-1/2 md:w-1/3 lg:w-1/4 bg-white border border-gray-300 rounded-lg overflow-hidden shadow-md transition-transform transform hover:scale-105 flex flex-col items-center text-center p-4 justify-between"
               >
                 {produto.fotos && produto.fotos.length > 0 && (
                   <Link href={`/produtos/${produto.id}`}>
@@ -106,17 +112,17 @@ const CategoriasPage = ({ params }: PageParams) => {
                     Ver detalhes
                   </Link>
                 </div>
-                <div className="text-left">
-                  <h2>{produto.nome}</h2>
+                <div className="text-left w-full">
+                  <h2 className="text-xl w-full">{produto.nome}</h2>
                   <p className="line-through text-red-500 text-sm">
-                    De: {produto.preco_original}
+                    De: R$ {produto.preco_original}
                   </p>
                   <p className="text-lg">
-                    Por: {produto.preco}{" "}
+                    Por: R$ {produto.preco}{" "}
                     <span className="text-sm">a vista</span>
                   </p>
                   <p className="text-base text-gray-500">
-                    Ou no cartão em até 12x de: {produto.preco_parcelado}
+                    Ou no cartão em até 12x de: R$ {produto.preco_parcelado}
                   </p>
                 </div>
               </div>
@@ -138,14 +144,20 @@ const CategoriasPage = ({ params }: PageParams) => {
         Exibindo todos os produtos de{" "}
         {decodeURIComponent(params.categorias).replace(/%20/g, " ")}
       </h1>
-      <div className="flex flex-row justify-center">
-        <FiltroComponent params={params} onFilterChange={handleFilterChange} />
+      <div className="flex flex-col items-start justify-center sm:flex-row">
+        <div className=" flex flex-col items-center">
+          <PesquisaProdutos onSearch={(term: string) => setSearchTerm(term)} />
+          <FiltroComponent
+            params={params}
+            onFilterChange={handleFilterChange}
+          />
+        </div>
 
-        <div className="flex flex-wrap gap-5 justify-center max-w-screen-lg m-8">
+        <div className="flex flex-wrap gap-4 justify-center max-w-screen-lg m-4">
           {produtos.map((produto: any) => (
             <div
               key={produto.id}
-              className="relative max-w-sm bg-white border border-gray-300 rounded-lg overflow-hidden shadow-md transition-transform transform hover:scale-105 flex flex-col items-center text-center p-4 justify-between"
+              className="relative w-full sm:w-1/2 md:w-1/3 lg:w-1/4 bg-white border border-gray-300 rounded-lg overflow-hidden shadow-md transition-transform transform hover:scale-105 flex flex-col items-center text-center p-4 justify-between"
             >
               {produto.fotos && produto.fotos.length > 0 && (
                 <Link href={`/produtos/${produto.id}`}>

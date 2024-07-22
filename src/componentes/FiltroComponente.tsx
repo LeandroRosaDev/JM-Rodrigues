@@ -1,4 +1,3 @@
-// componentes/produtosComponentes/filtro/FiltroComponent.tsx
 import { useState, useEffect } from "react";
 
 interface FiltroProps {
@@ -79,25 +78,9 @@ const FiltroComponent = ({ params, onFilterChange }: FiltroProps) => {
   }, [filters, onFilterChange]);
 
   return (
-    <section className="w-64 h-full p-4 bg-gray-100 rounded-lg shadow-md m-8 mr-5">
+    <section className=" sm:w-64 p-4 bg-gray-100 rounded-lg shadow-md m-4">
       <h3 className="mb-4">Filtros:</h3>
       <div className="content">
-        {/* <div>
-          <h2 className="mb-2 text-lg">Produtos:</h2>
-          {availableFilters.map((subCategoria) => (
-            <label key={subCategoria} className="flex flex-wrap mb-2 text-sm">
-              <input
-                type="checkbox"
-                checked={filters.sub_categoria === subCategoria}
-                onChange={() =>
-                  handleFilterChange("sub_categoria", subCategoria)
-                }
-                className="mr-2"
-              />
-              {subCategoria}
-            </label>
-          ))}
-        </div> */}
         <div>
           <h2 className="mb-2 text-lg">Promoção:</h2>
           {globalFilters.situacao.map((situacao) => (
@@ -112,21 +95,6 @@ const FiltroComponent = ({ params, onFilterChange }: FiltroProps) => {
             </label>
           ))}
         </div>
-        {/* <div>
-          <h2 className="mb-2 text-lg">Cor:</h2>
-          {globalFilters.cor.map((cor) => (
-            <label key={cor} className="flex flex-wrap mb-2 text-sm">
-              <input
-                type="checkbox"
-                checked={filters.cor === cor}
-                onChange={() => handleFilterChange("cor", cor)}
-                className="mr-2"
-              />
-              {cor.charAt(0).toUpperCase() + cor.slice(1)}
-            </label>
-          ))}
-        </div> */}
-
         <div>
           <h2 className="mb-2 text-lg">Disponibilidade:</h2>
           {globalFilters.disponibilidade.map((disponibilidade) => (
@@ -146,7 +114,6 @@ const FiltroComponent = ({ params, onFilterChange }: FiltroProps) => {
             </label>
           ))}
         </div>
-
         <h2 className="mb-6 text-lg">Range de Valor:</h2>
         <div id="mobile" className="flex flex-wrap gap-2 mt-[-1.25rem]">
           {globalFilters.valor.map((valor) => (
@@ -164,7 +131,7 @@ const FiltroComponent = ({ params, onFilterChange }: FiltroProps) => {
       </div>
       <button
         onClick={handleClearFilters}
-        className="block mt-4 px-4 py-2 bg-yellow-500 text-white rounded cursor-pointer hover:bg-yellow-600"
+        className="bg-yellow-500 text-white py-2 px-4 rounded transition duration-100 hover:bg-yellow-600 focus:outline-none focus:shadow-outline w-full sm:w-auto"
       >
         Limpar Filtros
       </button>
